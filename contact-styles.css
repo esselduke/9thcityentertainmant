@@ -213,6 +213,22 @@ body.scrolled .menu-btn:hover span {
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: block;
+}
+
+.logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    z-index: 10;
+    font-size: 10px;
+    color: var(--primary-white);
+    letter-spacing: 3px;
+    font-weight: 600;
+    opacity: 0.9;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .logo-link:hover {
@@ -226,13 +242,13 @@ body.scrolled .menu-btn:hover span {
     margin-bottom: 10px;
 }
 
-.logo-text {
+/* .logo-text {
     font-size: 10px;
     color: var(--primary-white);
     letter-spacing: 3px;
     font-weight: 600;
     opacity: 0.9;
-}
+} */
 
 .hero-title {
     position: absolute;
