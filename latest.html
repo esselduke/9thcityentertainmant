@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest - 9TH CITY ENTERTAINMENT</title>
+    <link rel="stylesheet" href="/css/latest-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side Menu -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn" aria-label="Close Menu"></button>
+        
+        <ul class="menu-items">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#labels">ARTISTS & RELEASES</a></li>
+            <li><a href="#impact">PROJECTS</a></li>
+            <li><a href="#innovation">MEDIA/VISUALS</a></li>
+            <li><a href="#artists">FOR ARTISTS</a></li>
+            <li><a href="#careers">JOIN US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- News Button (Top Left) -->
+    <a href="latest.html" class="news-btn active">LATEST</a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1920&q=80" alt="9TH CITY Latest News" class="hero-image">
+        
+        <!-- Logo (clickable to return home) -->
+        <a href="index.html" class="logo-link">
+            <img src="img/9thCityLogoWhite.png" alt="9TH CITY ENTERTAINMENT" class="hero-logo">
+        </a>
+        <div class="logo-text">9TH CITY ENTERTAINMENT</div>
+        
+        <h1 class="hero-title">LATEST</h1>
+    </section>
+
+    <!-- Filter Navigation -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="releases">NEW RELEASES</button>
+            <button class="filter-btn" data-filter="videos">VIDEOS & BTS</button>
+            <button class="filter-btn" data-filter="announcements">ANNOUNCEMENTS</button>
+            <button class="filter-btn" data-filter="press">PRESS & MEDIA</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            
+            <!-- Featured Story -->
+            <article class="featured-article" data-category="releases">
+                <div class="featured-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80" alt="Featured Release" class="featured-image">
+                    <div class="featured-overlay"></div>
+                    <span class="category-badge">NEW RELEASE</span>
+                </div>
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span class="date">November 8, 2025</span>
+                        <span class="separator">•</span>
+                        <span class="read-time">3 min read</span>
+                    </div>
+                    <h2 class="featured-title">Major Album Drop: Artist Name Releases Debut LP</h2>
+                    <p class="featured-excerpt">9TH CITY ENTERTAINMENT is proud to announce the release of our latest signing's debut album, featuring collaborations with industry legends and a fresh sound that's taking the music world by storm.</p>
+                    <a href="#" class="read-more-btn">Read Full Story →</a>
+                </div>
+            </article>
+
+            <!-- News Grid -->
+            <div class="news-grid">
+                
+                <!-- News Item 1 - Video -->
+                <article class="news-card" data-category="videos">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="Behind the Scenes" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge video">VIDEO</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 7, 2025</span>
+                        </div>
+                        <h3 class="card-title">Behind the Scenes: Studio Session Highlights</h3>
+                        <p class="card-excerpt">Go inside the creative process as our artists craft their next hit singles.</p>
+                        <a href="#" class="card-link">Watch Now →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 2 - Announcement -->
+                <article class="news-card" data-category="announcements">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&q=80" alt="New Signing" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge announcement">ANNOUNCEMENT</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 6, 2025</span>
+                        </div>
+                        <h3 class="card-title">9TH CITY Signs Rising Star Producer</h3>
+                        <p class="card-excerpt">We're thrilled to welcome an innovative producer to our growing roster.</p>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 3 - Release -->
+                <article class="news-card" data-category="releases">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80" alt="Single Release" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge release">NEW SINGLE</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 5, 2025</span>
+                        </div>
+                        <h3 class="card-title">Hot New Single: "Track Title" Out Now</h3>
+                        <p class="card-excerpt">Stream the latest banger from our featured artist on all platforms.</p>
+                        <a href="#" class="card-link">Listen Now →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 4 - Press -->
+                <article class="news-card" data-category="press">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" alt="Press Feature" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge press">PRESS</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 4, 2025</span>
+                        </div>
+                        <h3 class="card-title">Featured in Billboard: The Rise of 9TH CITY</h3>
+                        <p class="card-excerpt">Major publication highlights our impact on the music industry.</p>
+                        <a href="#" class="card-link">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 5 - Video -->
+                <article class="news-card" data-category="videos">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="Music Video" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge video">VIDEO</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 3, 2025</span>
+                        </div>
+                        <h3 class="card-title">Official Music Video: "Song Title" Premiere</h3>
+                        <p class="card-excerpt">Watch the stunning visual storytelling in our latest music video.</p>
+                        <a href="#" class="card-link">Watch Video →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 6 - Announcement -->
+                <article class="news-card" data-category="announcements">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&q=80" alt="Partnership" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge announcement">PARTNERSHIP</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 2, 2025</span>
+                        </div>
+                        <h3 class="card-title">Strategic Partnership Announcement</h3>
+                        <p class="card-excerpt">9TH CITY partners with leading brand for exclusive collaboration.</p>
+                        <a href="#" class="card-link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 7 - Release -->
+                <article class="news-card" data-category="releases">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="EP Release" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge release">EP</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">November 1, 2025</span>
+                        </div>
+                        <h3 class="card-title">New EP: Artist Name Drops 6-Track Project</h3>
+                        <p class="card-excerpt">A fresh collection of tracks showcasing versatility and artistry.</p>
+                        <a href="#" class="card-link">Stream Now →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 8 - Press -->
+                <article class="news-card" data-category="press">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80" alt="Interview" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge press">INTERVIEW</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">October 31, 2025</span>
+                        </div>
+                        <h3 class="card-title">Exclusive Interview with 9TH CITY Founder</h3>
+                        <p class="card-excerpt">Deep dive into the vision and future of 9TH CITY ENTERTAINMENT.</p>
+                        <a href="#" class="card-link">Watch Interview →</a>
+                    </div>
+                </article>
+
+                <!-- News Item 9 - Video -->
+                <article class="news-card" data-category="videos">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" alt="Live Performance" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="category-badge video">LIVE</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="date">October 30, 2025</span>
+                        </div>
+                        <h3 class="card-title">Live Performance: Artist Rocks the Stage</h3>
+                        <p class="card-excerpt">Relive the energy of our recent sold-out showcase.</p>
+                        <a href="#" class="card-link">Watch Performance →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More Stories</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">Stay Updated</h2>
+            <p class="newsletter-subtitle">Get the latest news, releases, and exclusive content delivered to your inbox.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook">f</i></a>
+            <a href="#" aria-label="Twitter"><i class="icon-twitter">𝕏</i></a>
+            <a href="#" aria-label="Instagram"><i class="icon-instagram">📷</i></a>
+            <!-- <a href="#" aria-label="Email"><i class="icon-email">✉</i></a> -->
+            <!-- <a href="#" aria-label="Search"><i class="icon-search">🔍</i></a> -->
+        </div>
+
+        <div class="footer-content">
+            <p class="copyright">© Copyright 2025 9TH CITY ENTERTAINMENT. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <span>/</span>
+                <a href="#privacy">Privacy Policy</a>
+                <span>/</span>
+                <a href="#rights">Reservation of Rights</a>
+                <span>/</span>
+                <a href="#cookies">Cookie Choices</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/latest-script.js"></script>
+</body>
+</html>

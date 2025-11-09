@@ -1,0 +1,727 @@
+/* ============================================
+   COLOR VARIABLES
+   ============================================ */
+:root {
+    /* Brand Colors */
+    --primary-red: #C41E3A;
+    --primary-black: #000000;
+    --primary-white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --medium-gray: #999999;
+    --dark-gray: #333333;
+    --text-gray: #666666;
+    
+    /* Menu Colors */
+    --menu-bg: #000000;
+    --menu-hover: #C41E3A;
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary-white);
+    color: var(--dark-gray);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ============================================
+   HAMBURGER MENU BUTTON
+   ============================================ */
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn span {
+    width: 30px;
+    height: 3px;
+    background: var(--primary-white);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.menu-btn:hover span {
+    background: var(--primary-red);
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -9px);
+}
+
+/* Scroll state */
+body.scrolled .menu-btn span {
+    background: var(--primary-black);
+}
+
+body.scrolled .menu-btn:hover span {
+    background: var(--primary-red);
+}
+
+/* ============================================
+   SIDE MENU
+   ============================================ */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--menu-bg);
+    z-index: 999;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 80px 30px 40px;
+    overflow-y: auto;
+}
+
+.side-menu.active {
+    right: 0;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    margin-bottom: 25px;
+}
+
+.menu-items li a {
+    color: var(--primary-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 8px 0;
+}
+
+.menu-items li a:hover {
+    color: var(--primary-red);
+    padding-left: 10px;
+}
+
+/* ============================================
+   NEWS BUTTON
+   ============================================ */
+.news-btn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-black);
+    color: var(--primary-white);
+    text-decoration: none;
+    padding: 30px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 900;
+    transition: all 0.3s ease;
+}
+
+.news-btn:hover {
+    background: var(--primary-red);
+    padding-left: 50px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    min-height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) contrast(1.1) brightness(0.6);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.logo-link {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.logo-link:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.hero-logo {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8));
+}
+
+.logo-text {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 9px;
+    color: var(--primary-white);
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 0.85;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: var(--primary-white);
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+.breadcrumb-container {
+    background: var(--primary-white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.breadcrumb {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+    font-size: 13px;
+    color: var(--text-gray);
+}
+
+.breadcrumb a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-red);
+}
+
+.breadcrumb .separator {
+    margin: 0 10px;
+    color: var(--medium-gray);
+}
+
+.breadcrumb .current {
+    color: var(--primary-red);
+}
+
+/* ============================================
+   CONTENT SECTION
+   ============================================ */
+.content-section {
+    background: var(--primary-white);
+    padding: 80px 0 60px;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+.header-underline {
+    width: 60px;
+    height: 2px;
+    background: var(--primary-red);
+}
+
+.content-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+}
+
+.statement-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* ============================================
+   MISSION SECTION
+   ============================================ */
+.mission-section {
+    background: var(--light-gray);
+    padding: 60px 0;
+}
+
+.mission-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.mission-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+.services-section {
+    background: var(--primary-white);
+    padding: 60px 0;
+}
+
+.services-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.service-item {
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 40px;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    letter-spacing: 0.3px;
+}
+
+.service-description {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+/* ============================================
+   PHILOSOPHY SECTION
+   ============================================ */
+.philosophy-section {
+    background: var(--light-gray);
+    padding: 60px 0;
+}
+
+.philosophy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.philosophy-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+/* ============================================
+   NETWORK SECTION
+   ============================================ */
+.network-section {
+    background: var(--primary-white);
+    padding: 60px 0;
+}
+
+.network-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.network-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+/* ============================================
+   VALUES SECTION
+   ============================================ */
+.values-section {
+    background: var(--light-gray);
+    padding: 60px 0;
+}
+
+.values-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.values-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+/* ============================================
+   FUTURE SECTION
+   ============================================ */
+.future-section {
+    background: var(--primary-white);
+    padding: 60px 0 80px;
+}
+
+.future-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.future-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+}
+
+.future-tagline {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    font-style: italic;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    padding: 50px 40px 30px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    color: var(--primary-white);
+    text-decoration: none;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+.footer-content .copyright {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-red);
+}
+
+.footer-links span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 32px;
+        letter-spacing: 6px;
+    }
+    
+    .hero-logo {
+        width: 100px;
+    }
+    
+    .content-container,
+    .mission-container,
+    .services-container,
+    .philosophy-container,
+    .network-container,
+    .values-container,
+    .future-container {
+        padding: 0 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-btn {
+        top: 20px;
+        right: 20px;
+    }
+    
+    .news-btn {
+        padding: 20px 25px;
+        font-size: 12px;
+    }
+    
+    .side-menu {
+        width: 250px;
+        right: -250px;
+        padding: 60px 20px 30px;
+    }
+    
+    .hero-section {
+        height: 30vh;
+        min-height: 250px;
+    }
+    
+    .hero-logo {
+        width: 90px;
+    }
+    
+    .logo-text {
+        font-size: 8px;
+        top: 85px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        letter-spacing: 4px;
+        bottom: 30px;
+    }
+    
+    .breadcrumb {
+        padding: 0 20px;
+        font-size: 12px;
+    }
+    
+    .content-section,
+    .mission-section,
+    .services-section,
+    .philosophy-section,
+    .network-section,
+    .values-section,
+    .future-section {
+        padding: 50px 0;
+    }
+    
+    .content-container,
+    .mission-container,
+    .services-container,
+    .philosophy-container,
+    .network-container,
+    .values-container,
+    .future-container {
+        padding: 0 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .footer {
+        padding: 40px 20px 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer-links span {
+        display: none;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero-logo {
+        width: 80px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+    
+    .section-header h2 {
+        font-size: 22px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-section {
+    animation: fadeIn 0.8s ease-in;
+}
+
+.service-item {
+    animation: slideUp 0.6s ease-out both;
+}
+
+.service-item:nth-child(1) { animation-delay: 0.1s; }
+.service-item:nth-child(2) { animation-delay: 0.2s; }
+.service-item:nth-child(3) { animation-delay: 0.3s; }
+.service-item:nth-child(4) { animation-delay: 0.4s; }
