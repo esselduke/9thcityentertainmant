@@ -221,7 +221,7 @@ body.scrolled .menu-btn:hover span {
 }
 
 .hero-logo {
-    width: 120px;
+    width: 180px;
     height: auto;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8));
 }
@@ -239,6 +239,7 @@ body.scrolled .menu-btn:hover span {
     opacity: 0.85;
     text-align: center;
     white-space: nowrap;
+    margin-top: 20px;
 }
 
 .hero-title {
