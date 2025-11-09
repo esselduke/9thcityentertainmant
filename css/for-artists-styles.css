@@ -932,7 +932,7 @@ html {
   .hero-title {
     position: absolute;
     top: 66%;
-    left: 53%;
+    left: 52%;
     transform: translate(-50%, 0);
     font-size: 23px;           /* reduce size */
     line-height: 1.05;
@@ -988,7 +988,7 @@ html {
 
   /* Small tweak: if logo still overlaps title on some small screens, push title down more */
   @media (max-height: 680px) {
-    .hero-title { top: 50%; font-size: 20px; white-space: nowrap;}
-    .hero-subtitle { top: calc(50% + 44px); font-size: 12px; left: 49%;}
+    .hero-title { top: 50%; font-size: 20px; white-space: nowrap; left: 52%;}
+    .hero-subtitle { top: calc(50% + 44px); font-size: 12px; }
   }
 }
