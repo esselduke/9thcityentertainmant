@@ -109,33 +109,28 @@ function filterItems(filter, newsCards, featuredArticle) {
     // Show/hide featured article
     if (filter === 'all') {
         featuredArticle.style.display = 'grid';
+        featuredArticle.style.opacity = '1';
     } else {
         const featuredCategory = featuredArticle.getAttribute('data-category');
-        featuredArticle.style.display = filter === featuredCategory ? 'grid' : 'none';
+        if (filter === featuredCategory) {
+            featuredArticle.style.display = 'grid';
+            featuredArticle.style.opacity = '1';
+        } else {
+            featuredArticle.style.display = 'none';
+        }
     }
     
-    // Show/hide news cards
+    // Show/hide news cards instantly
     newsCards.forEach(card => {
         const category = card.getAttribute('data-category');
         
-        if (filter === 'all') {
+        if (filter === 'all' || category === filter) {
             card.style.display = 'block';
-            setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 10);
-        } else if (category === filter) {
-            card.style.display = 'block';
-            setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 10);
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
         } else {
+            card.style.display = 'none';
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                card.style.display = 'none';
-            }, 300);
         }
     });
 }
@@ -241,46 +236,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// ============================================
-// CARD CLICK HANDLERS
-// ============================================
-document.querySelectorAll('.news-card, .featured-article').forEach(card => {
-    card.addEventListener('click', function(e) {
-        // Prevent navigation if clicking on a link
-        if (e.target.tagName === 'A') {
-            return;
-        }
-        
-        // Get the link from the card
-        const link = this.querySelector('a');
-        if (link) {
-            window.location.href = link.getAttribute('href');
-        }
-    });
-});
-
-// ============================================
-// INTERSECTION OBSERVER FOR ANIMATIONS
-// ============================================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe all news cards
-document.querySelectorAll('.news-card').forEach(card => {
-    observer.observe(card);
 });
 
 // ============================================
