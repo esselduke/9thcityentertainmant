@@ -109,12 +109,10 @@ function filterItems(filter, newsCards, featuredArticle) {
     // Show/hide featured article
     if (filter === 'all') {
         featuredArticle.style.display = 'grid';
-        featuredArticle.style.opacity = '1';
     } else {
         const featuredCategory = featuredArticle.getAttribute('data-category');
         if (filter === featuredCategory) {
             featuredArticle.style.display = 'grid';
-            featuredArticle.style.opacity = '1';
         } else {
             featuredArticle.style.display = 'none';
         }
@@ -126,11 +124,8 @@ function filterItems(filter, newsCards, featuredArticle) {
         
         if (filter === 'all' || category === filter) {
             card.style.display = 'block';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
         } else {
             card.style.display = 'none';
-            card.style.opacity = '0';
         }
     });
 }

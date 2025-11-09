@@ -60,13 +60,13 @@ body {
 .menu-btn span {
     width: 30px;
     height: 3px;
-    background: var(--primary-white);
+    background: var(--primary-red);
     transition: all 0.3s ease;
     display: block;
 }
 
 .menu-btn:hover span {
-    background: var(--primary-red);
+    background: var(--primary-white);
 }
 
 .menu-btn.active span:nth-child(1) {
@@ -83,11 +83,11 @@ body {
 
 /* Scroll state */
 body.scrolled .menu-btn span {
-    background: var(--primary-black);
+    background: var(--primary-red);
 }
 
 body.scrolled .menu-btn:hover span {
-    background: var(--primary-red);
+    background: var(--primary-white);
 }
 
 /* ============================================
@@ -185,8 +185,8 @@ body.scrolled .menu-btn:hover span {
 .hero-section {
     position: relative;
     width: 100%;
-    height: 50vh;
-    min-height: 400px;
+    height: 35vh;
+    min-height: 280px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -248,7 +248,7 @@ body.scrolled .menu-btn:hover span {
     font-weight: 600;
     opacity: 0.9;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .hero-title {
@@ -271,9 +271,6 @@ body.scrolled .menu-btn:hover span {
     background: var(--primary-white);
     border-bottom: 2px solid var(--light-gray);
     padding: 30px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .filter-container {
@@ -333,7 +330,6 @@ body.scrolled .menu-btn:hover span {
     grid-template-columns: 1.2fr 1fr;
     gap: 40px;
     margin-bottom: 80px;
-    transition: all 0.3s ease;
 }
 
 .featured-image-wrapper {
@@ -772,7 +768,7 @@ body.scrolled .menu-btn:hover span {
     }
     
     .hero-section {
-        height: 40vh;
+        height: 30vh;
         min-height: 300px;
     }
     
@@ -877,24 +873,4 @@ body.scrolled .menu-btn:hover span {
     to {
         opacity: 1;
     }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.featured-article {
-    animation: slideUp 0.6s ease-out;
-}
-
-/* Remove staggered animations - they interfere with filtering */
-.news-card {
-    /* No initial animation */
 }
