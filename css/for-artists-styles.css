@@ -932,7 +932,7 @@ html {
   .hero-title {
     position: absolute;
     top: 66%;
-    left: 50%;
+    left: 51%;
     transform: translate(-50%, 0);
     font-size: 23px;           /* reduce size */
     line-height: 1.05;
