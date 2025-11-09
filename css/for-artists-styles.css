@@ -989,6 +989,6 @@ html {
   /* Small tweak: if logo still overlaps title on some small screens, push title down more */
   @media (max-height: 680px) {
     .hero-title { top: 50%; font-size: 20px; white-space: nowrap;}
-    .hero-subtitle { top: calc(50% + 44px); font-size: 12px; right: 49%;}
+    .hero-subtitle { top: calc(50% + 44px); font-size: 12px; left: 49%;}
   }
 }
