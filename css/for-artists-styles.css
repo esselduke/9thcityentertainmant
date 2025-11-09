@@ -943,6 +943,7 @@ html {
     padding: 0 12px;
     z-index: 11;
     text-shadow: 1px 1px 12px rgba(0,0,0,0.8);
+    white-space: nowrap;
   }
 
   .hero-subtitle {
@@ -987,7 +988,7 @@ html {
 
   /* Small tweak: if logo still overlaps title on some small screens, push title down more */
   @media (max-height: 680px) {
-    .hero-title { top: 50%; font-size: 26px; }
+    .hero-title { top: 50%; font-size: 26px; white-space: nowrap;}
     .hero-subtitle { top: calc(50% + 44px); font-size: 12px; }
   }
 }
