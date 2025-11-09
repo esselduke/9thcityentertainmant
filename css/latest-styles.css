@@ -253,8 +253,8 @@ body.scrolled .menu-btn:hover span {
 
 .hero-title {
     position: absolute;
-    bottom: 60px;
-    left: 50%;
+    bottom: 10px;  /* Changed from 60px */
+    left: 43%;
     transform: translateX(-50%);
     font-size: 48px;
     font-weight: 300;
@@ -521,6 +521,10 @@ body.scrolled .menu-btn:hover span {
     transition: all 0.3s ease;
 }
 
+.play-icon svg {
+    margin-left: 2px; /* Slight offset to center the triangle visually */
+}
+
 .news-card:hover .play-icon {
     background: var(--primary-red);
     color: var(--primary-white);
@@ -780,6 +784,7 @@ body.scrolled .menu-btn:hover span {
         font-size: 32px;
         letter-spacing: 4px;
         bottom: 40px;
+        left: 36%;
     }
     
     .filter-container {
@@ -861,6 +866,102 @@ body.scrolled .menu-btn:hover span {
     .card-title {
         font-size: 16px;
     }
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial hidden state for scroll animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Page load animations */
+.featured-article {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.news-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+/* Stagger animation for news cards */
+.news-card:nth-child(1) { animation-delay: 0.3s; }
+.news-card:nth-child(2) { animation-delay: 0.4s; }
+.news-card:nth-child(3) { animation-delay: 0.5s; }
+.news-card:nth-child(4) { animation-delay: 0.6s; }
+.news-card:nth-child(5) { animation-delay: 0.7s; }
+.news-card:nth-child(6) { animation-delay: 0.8s; }
+.news-card:nth-child(7) { animation-delay: 0.9s; }
+.news-card:nth-child(8) { animation-delay: 1s; }
+.news-card:nth-child(9) { animation-delay: 1.1s; }
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Newsletter section scroll animation */
+.newsletter-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.newsletter-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Filter buttons fade in */
+.filter-btn {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.filter-btn:nth-child(1) { animation-delay: 0.1s; }
+.filter-btn:nth-child(2) { animation-delay: 0.15s; }
+.filter-btn:nth-child(3) { animation-delay: 0.2s; }
+.filter-btn:nth-child(4) { animation-delay: 0.25s; }
+.filter-btn:nth-child(5) { animation-delay: 0.3s; }
+
+/* Hero section fade in */
+.hero-section {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Logo animations */
+.hero-logo {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.logo-text {
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.hero-title {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
 /* ============================================

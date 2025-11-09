@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollEffects();
     initializeFilters();
     initializeNewsletter();
+    initializeScrollAnimations(); // Add this line
 });
 
 // ============================================
@@ -232,6 +233,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+function initializeScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optionally unobserve after animation to improve performance
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe newsletter section
+    const newsletterSection = document.querySelector('.newsletter-section');
+    if (newsletterSection) {
+        observer.observe(newsletterSection);
+    }
+
+    // Observe any future scroll-animate elements
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    scrollElements.forEach(el => observer.observe(el));
+}
 
 // ============================================
 // ADD ANIMATION STYLES DYNAMICALLY
