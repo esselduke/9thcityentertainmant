@@ -829,6 +829,7 @@ body.scrolled .menu-btn:hover span {
         font-size: 20px;
         letter-spacing: 4px;
         bottom: 100px;
+        right: 20px;
     }
     
     .hero-subtitle {
