@@ -826,16 +826,14 @@ body.scrolled .menu-btn:hover span {
     }
     
     .hero-title {
-        font-size: 18px;
+        font-size: 32px;
         letter-spacing: 4px;
         bottom: 100px;
-        left: 45%;
     }
     
     .hero-subtitle {
         font-size: 12px;
-        bottom: 30px;
-        left: 40%;
+        bottom: 40px;
     }
     
     .tab-container {
@@ -903,7 +901,7 @@ body.scrolled .menu-btn:hover span {
     }
     
     .hero-title {
-        font-size: 24px;
+        font-size: 18px;
         letter-spacing: 3px;
     }
     
