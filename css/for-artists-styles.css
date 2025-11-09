@@ -949,7 +949,7 @@ html {
   .hero-subtitle {
     position: absolute;
     top: calc(66% + 46px);     /* place below the title with consistent gap */
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     font-size: 13px;           /* smaller for mobile */
     line-height: 1.5;
