@@ -934,7 +934,7 @@ html {
     top: 66%;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 28px;           /* reduce size */
+    font-size: 23px;           /* reduce size */
     line-height: 1.05;
     font-weight: 400;
     letter-spacing: 1px;
