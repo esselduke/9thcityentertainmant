@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media / Visuals - 9TH CITY ENTERTAINMENT</title>
+    <link rel="stylesheet" href="/css/media-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side Menu -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn" aria-label="Close Menu"></button>
+        
+        <ul class="menu-items">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="#labels">ARTISTS & RELEASES</a></li>
+            <li><a href="#impact">PROJECTS</a></li>
+            <li><a href="media.html">MEDIA/VISUALS</a></li>
+            <li><a href="/for-artists.html">FOR ARTISTS</a></li>
+            <li><a href="#careers">JOIN US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- News Button (Top Left) -->
+    <a href="latest.html" class="news-btn">LATEST</a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80" alt="9TH CITY Media" class="hero-image">
+        
+        <!-- Logo (clickable to return home) -->
+        <a href="index.html" class="logo-link">
+            <img src="img/9thCityLogoWhite.png" alt="9TH CITY ENTERTAINMENT" class="hero-logo">
+        </a>
+        <div class="logo-text">The Vision Behind the Sound.</div>
+        
+        <h1 class="hero-title">MEDIA / VISUALS</h1>
+        
+        <p class="hero-subtitle">Explore the visuals, stories, and moments defining 9TH CITY ENTERTAINMENT.</p>
+    </section>
+
+    <!-- Link to Latest -->
+    <div class="page-link-banner">
+        <p>For recent announcements and project stories, visit our <a href="latest.html">LATEST page</a>.</p>
+    </div>
+
+    <!-- Tab Navigation -->
+    <section class="tab-section">
+        <div class="tab-container">
+            <button class="tab-btn active" data-category="all">ALL MEDIA</button>
+            <button class="tab-btn" data-category="music-videos">🎥 MUSIC VIDEOS</button>
+            <button class="tab-btn" data-category="behind-scenes">🎬 BEHIND THE SCENES</button>
+            <button class="tab-btn" data-category="photography">📸 PHOTOGRAPHY</button>
+            <button class="tab-btn" data-category="press">📰 MEDIA FEATURES</button>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <main class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                
+                <!-- Music Video 1 -->
+                <div class="media-card" data-category="music-videos" data-type="video" data-video-id="dQw4w9WgXcQ">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="Music Video" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="play-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <span class="media-badge music-video">MUSIC VIDEO</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Artist Name - "Track Title"</h3>
+                        <p class="media-date">November 8, 2025</p>
+                        <a href="latest.html" class="article-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Behind the Scenes 1 -->
+                <div class="media-card" data-category="behind-scenes" data-type="video" data-video-id="dQw4w9WgXcQ">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" alt="Behind the Scenes" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="play-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <span class="media-badge bts">BEHIND THE SCENES</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Studio Session Highlights</h3>
+                        <p class="media-date">November 7, 2025</p>
+                        <a href="latest.html" class="article-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Photography 1 -->
+                <div class="media-card" data-category="photography" data-type="image" data-image-url="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=1920&q=80">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80" alt="Photography" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="view-icon">VIEW</div>
+                        <span class="media-badge photography">PHOTOGRAPHY</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Artist Portrait Session</h3>
+                        <p class="media-date">November 6, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Press Feature 1 -->
+                <div class="media-card" data-category="press" data-type="image" data-image-url="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1920&q=80">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80" alt="Press Feature" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="view-icon">VIEW</div>
+                        <span class="media-badge press">MEDIA FEATURE</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Billboard Magazine Feature</h3>
+                        <p class="media-date">November 5, 2025</p>
+                        <a href="latest.html" class="article-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Music Video 2 -->
+                <div class="media-card" data-category="music-videos" data-type="video" data-video-id="dQw4w9WgXcQ">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" alt="Music Video" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="play-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <span class="media-badge music-video">MUSIC VIDEO</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Artist Name - "Song Title"</h3>
+                        <p class="media-date">November 4, 2025</p>
+                        <a href="latest.html" class="article-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Behind the Scenes 2 -->
+                <div class="media-card" data-category="behind-scenes" data-type="video" data-video-id="dQw4w9WgXcQ">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80" alt="Behind the Scenes" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="play-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <span class="media-badge bts">BEHIND THE SCENES</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Album Recording Process</h3>
+                        <p class="media-date">November 3, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Photography 2 -->
+                <div class="media-card" data-category="photography" data-type="image" data-image-url="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&q=80">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="Photography" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="view-icon">VIEW</div>
+                        <span class="media-badge photography">PHOTOGRAPHY</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Live Performance Gallery</h3>
+                        <p class="media-date">November 2, 2025</p>
+                    </div>
+                </div>
+
+                <!-- Music Video 3 -->
+                <div class="media-card" data-category="music-videos" data-type="video" data-video-id="dQw4w9WgXcQ">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80" alt="Music Video" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="play-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <span class="media-badge music-video">MUSIC VIDEO</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Premiere - Latest Single</h3>
+                        <p class="media-date">November 1, 2025</p>
+                        <a href="latest.html" class="article-link">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Photography 3 -->
+                <div class="media-card" data-category="photography" data-type="image" data-image-url="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1920&q=80">
+                    <div class="media-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" alt="Photography" class="media-image">
+                        <div class="media-overlay"></div>
+                        <div class="view-icon">VIEW</div>
+                        <span class="media-badge photography">PHOTOGRAPHY</span>
+                    </div>
+                    <div class="media-info">
+                        <h3 class="media-title">Backstage Moments</h3>
+                        <p class="media-date">October 31, 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">↑</button>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="video-wrapper" id="videoWrapper">
+                <!-- YouTube iframe will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <img src="" alt="Full size image" id="lightboxImage">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook">f</i></a>
+            <a href="https://x.com/9thcityent?s=21" aria-label="Twitter"><i class="icon-twitter">𝕏</i></a>
+            <a href="https://www.instagram.com/9thcityent?igsh=MTl5aG1qNDNreHp1eg%3D%3D&utm_source=qr" aria-label="Instagram"><i class="icon-instagram">📷</i></a>
+        </div>
+
+        <div class="footer-content">
+            <p class="copyright">© Copyright 2025 9TH CITY ENTERTAINMENT. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <span>/</span>
+                <a href="#privacy">Privacy Policy</a>
+                <span>/</span>
+                <a href="#rights">Reservation of Rights</a>
+                <span>/</span>
+                <a href="#cookies">Cookie Choices</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/media-script.js"></script>
+</body>
+</html>
