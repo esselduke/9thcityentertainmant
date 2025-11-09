@@ -931,7 +931,7 @@ html {
   /* group title + subtitle behavior: allow natural stacking and horizontal centering */
   .hero-title {
     position: absolute;
-    top: 46%;
+    top: 66%;
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 28px;           /* reduce size */
@@ -947,7 +947,7 @@ html {
 
   .hero-subtitle {
     position: absolute;
-    top: calc(46% + 46px);     /* place below the title with consistent gap */
+    top: calc(66% + 46px);     /* place below the title with consistent gap */
     left: 50%;
     transform: translateX(-50%);
     font-size: 13px;           /* smaller for mobile */

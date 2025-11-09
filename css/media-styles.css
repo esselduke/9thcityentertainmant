@@ -826,14 +826,14 @@ body.scrolled .menu-btn:hover span {
     }
     
     .hero-title {
-        font-size: 32px;
+        font-size: 20px;
         letter-spacing: 4px;
         bottom: 100px;
     }
     
     .hero-subtitle {
         font-size: 12px;
-        bottom: 70px;
+        bottom: 30px;
     }
     
     .tab-container {
