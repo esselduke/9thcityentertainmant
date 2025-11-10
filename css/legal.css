@@ -404,6 +404,9 @@ body.scrolled .menu-btn:focus span {
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
     z-index: 10;
     text-align: center;
+    white-space: nowrap;
+    max-width: 95%;
+    overflow: visible;
 }
 
 .hero-subtitle {
@@ -418,6 +421,8 @@ body.scrolled .menu-btn:focus span {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
     z-index: 10;
     text-align: center;
+    max-width: 90%;
+}
 }
 
 /* ============================================
@@ -1165,9 +1170,12 @@ input:disabled + .toggle-slider {
     }
     
     .hero-title {
-        font-size: 28px;
-        letter-spacing: 3px;
+        font-size: 24px;
+        letter-spacing: 2px;
         bottom: 60px;
+        white-space: normal;
+        line-height: 1.3;
+        padding: 0 10px;
     }
     
     .hero-subtitle {
@@ -1246,8 +1254,11 @@ input:disabled + .toggle-slider {
     }
     
     .hero-title {
-        font-size: 24px;
-        letter-spacing: 2px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        white-space: normal;
+        line-height: 1.3;
+        padding: 0 15px;
     }
     
     .section-toggle h2 {
@@ -1311,4 +1322,171 @@ button:focus-visible,
 a:focus-visible {
     outline: 2px solid var(--primary-red);
     outline-offset: 3px;
+}
+
+/* ============================================
+   STICKY NAVBAR
+   ============================================ */
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: transparent;
+    z-index: 950;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.sticky-navbar.show {
+    height: 70px;
+    background: var(--primary-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    pointer-events: all;
+}
+
+.navbar-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sticky-navbar.show .navbar-content {
+    opacity: 1;
+}
+
+.navbar-logo {
+    height: 35px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-gray);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Adjust menu button color when navbar is visible */
+.sticky-navbar.show ~ .menu-btn span {
+    background: var(--primary-black);
+}
+
+.sticky-navbar.show ~ .menu-btn:hover span {
+    background: var(--primary-red);
+}
+
+/* Adjust news button when navbar is visible */
+.sticky-navbar.show ~ .news-btn {
+    top: 70px;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-red);
+    color: var(--primary-white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 300;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(177, 2, 2, 0.4);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background: var(--accent-red);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(177, 2, 2, 0.5);
+}
+
+.back-to-top:active {
+    transform: translateY(-2px);
+}
+
+/* Arrow icon */
+.back-to-top::before {
+    content: '↑';
+}
+
+/* ============================================
+   RESPONSIVE - STICKY NAVBAR & BACK TO TOP
+   ============================================ */
+@media (max-width: 768px) {
+    .sticky-navbar.show {
+        height: 60px;
+    }
+    
+    .navbar-content {
+        padding: 0 20px;
+    }
+    
+    .navbar-logo {
+        height: 28px;
+    }
+    
+    .navbar-title {
+        font-size: 11px;
+    }
+    
+    .sticky-navbar.show ~ .news-btn {
+        top: 60px;
+    }
+    
+    .back-to-top {
+        bottom: 25px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-title {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }
