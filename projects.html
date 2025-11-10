@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - 9TH CITY ENTERTAINMENT</title>
+    <meta name="description" content="Explore 9TH CITY ENTERTAINMENT's creative campaigns, strategic rollouts, and global collaborations shaping the next generation of music and media.">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side Menu -->
+    <nav class="side-menu" id="sideMenu">
+        <!-- <button class="close-btn" id="closeBtn" aria-label="Close Menu"></button> -->
+        
+        <ul class="menu-items">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="artists-releases.html">ARTISTS & RELEASES</a></li>
+            <!-- <li><a href="projects.html">PROJECTS</a></li> -->
+            <li><a href="media.html">MEDIA/VISUALS</a></li>
+            <li><a href="for-artists.html">FOR ARTISTS</a></li>
+            <!-- <li><a href="join-us.html">JOIN US</a></li> -->
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- News Button (Top Left) -->
+    <a href="latest.html" class="news-btn">LATEST</a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80" alt="9TH CITY Projects" class="hero-image">
+        
+        <!-- Logo (clickable to return home) -->
+        <a href="index.html" class="logo-link">
+            <img src="img/9thCityLogoWhite.png" alt="9TH CITY ENTERTAINMENT" class="hero-logo">
+        </a>
+        <div class="logo-text">Creative Campaigns. Strategic Rollouts. Global Collaborations.</div>
+        
+        <h1 class="hero-title">PROJECTS</h1>
+        <p class="hero-subtitle">Explore 9TH CITY's label projects, artist campaigns, and creative partnerships shaping the next generation of music and media.</p>
+    </section>
+
+    <!-- Filter & Search Section -->
+    <section class="filter-search-section" id="filterSearchSection">
+        <div class="filter-search-container">
+            <!-- Top Row: Search and Sort -->
+            <div class="filter-top-row">
+                <!-- Search Bar -->
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input 
+                        type="search" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search projects..."
+                        aria-label="Search projects"
+                    >
+                    <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="sort-wrapper">
+                    <label for="sortSelect" class="sort-label">SORT:</label>
+                    <select id="sortSelect" class="sort-select" aria-label="Sort projects">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="alphabetical">A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Filter Buttons -->
+            <div class="filter-buttons" role="group" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="campaigns">CAMPAIGNS</button>
+                <button class="filter-btn" data-filter="brand-collabs">BRAND COLLABS</button>
+                <button class="filter-btn" data-filter="events">EVENTS</button>
+                <button class="filter-btn" data-filter="music-projects">MUSIC PROJECTS</button>
+                <button class="filter-btn" data-filter="community">COMMUNITY</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project Section -->
+    <section class="featured-project-section">
+        <div class="featured-project-container">
+            <div class="featured-project" data-project-id="featured">
+                <div class="featured-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1920&q=80" alt="Featured Campaign" class="featured-image">
+                    <div class="featured-overlay"></div>
+                    <span class="project-type-badge featured">FEATURED CAMPAIGN</span>
+                </div>
+                <div class="featured-content">
+                    <h2 class="featured-title">Global Sound Initiative 2025</h2>
+                    <p class="featured-tagline">Connecting African Talent to International Stages</p>
+                    <p class="featured-description">Our flagship campaign bringing emerging artists from Accra and Toronto to major festival circuits worldwide. A multi-city tour, brand partnerships, and documentary series showcasing the next wave of global music culture.</p>
+                    <button class="cta-btn" data-action="view-case-study">View Case Study</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <main class="projects-section">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h2 class="section-title">ALL PROJECTS</h2>
+                <p class="results-count" id="resultsCount" aria-live="polite">Showing 12 projects</p>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid" role="region" aria-live="polite">
+                
+                <!-- Project Card 1 -->
+                <article class="project-card" data-category="campaigns" data-project-id="1">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="Album Launch Campaign" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge campaign">CAMPAIGN</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Debut Album Launch: Rising Star</h3>
+                        <p class="card-summary">Multi-platform rollout strategy with viral content and strategic partnerships.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2025</span>
+                            <span class="card-location">Toronto, Canada</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="project-card" data-category="brand-collabs" data-project-id="2">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80" alt="Streetwear Collaboration" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge collab">BRAND COLLAB</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Streetwear x Sound Collaboration</h3>
+                        <p class="card-summary">Limited edition collection merging fashion and music culture.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2024</span>
+                            <span class="card-location">Accra, Ghana</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="project-card" data-category="events" data-project-id="3">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" alt="Live Showcase Event" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge event">EVENT</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">9TH CITY Live Showcase</h3>
+                        <p class="card-summary">Sold-out live performance featuring our full roster and special guests.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2024</span>
+                            <span class="card-location">Toronto, Canada</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 4 -->
+                <article class="project-card" data-category="music-projects" data-project-id="4">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80" alt="Compilation Album" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge music">MUSIC PROJECT</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sounds of the 9TH - Vol. 1</h3>
+                        <p class="card-summary">Compilation album showcasing diverse talent across Africa and the diaspora.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2024</span>
+                            <span class="card-location">Global Release</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 5 -->
+                <article class="project-card" data-category="community" data-project-id="5">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80" alt="Youth Music Program" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge community">COMMUNITY</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Future Sounds Initiative</h3>
+                        <p class="card-summary">Free music production workshops for underserved youth in Accra.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2023-Present</span>
+                            <span class="card-location">Accra, Ghana</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 6 -->
+                <article class="project-card" data-category="campaigns" data-project-id="6">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" alt="Visual Campaign" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge campaign">CAMPAIGN</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Visual Identity Reimagined</h3>
+                        <p class="card-summary">Complete rebrand campaign with documentary-style content series.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2023</span>
+                            <span class="card-location">Multi-City</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 7 -->
+                <article class="project-card" data-category="brand-collabs" data-project-id="7">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80" alt="Tech Partnership" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge collab">BRAND COLLAB</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tech x Music Innovation</h3>
+                        <p class="card-summary">Partnership with leading tech brand for immersive audio experiences.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2023</span>
+                            <span class="card-location">Toronto, Canada</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 8 -->
+                <article class="project-card" data-category="events" data-project-id="8">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80" alt="Festival Partnership" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge event">EVENT</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Festival Takeover Series</h3>
+                        <p class="card-summary">Curated stages at major international music festivals.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2023</span>
+                            <span class="card-location">Europe & Africa</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 9 -->
+                <article class="project-card" data-category="music-projects" data-project-id="9">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="Producer Series" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge music">MUSIC PROJECT</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Producer Spotlight Series</h3>
+                        <p class="card-summary">Monthly releases highlighting our in-house production talent.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2022-2023</span>
+                            <span class="card-location">Digital Release</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 10 -->
+                <article class="project-card" data-category="community" data-project-id="10">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80" alt="Studio Access Program" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge community">COMMUNITY</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Open Studio Sessions</h3>
+                        <p class="card-summary">Monthly open studio days for emerging independent artists.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2022-Present</span>
+                            <span class="card-location">Toronto, Canada</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 11 -->
+                <article class="project-card" data-category="campaigns" data-project-id="11">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80" alt="Social Impact Campaign" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge campaign">CAMPAIGN</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Amplify Voices Initiative</h3>
+                        <p class="card-summary">Campaign highlighting underrepresented artists in the industry.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2022</span>
+                            <span class="card-location">Global</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+                <!-- Project Card 12 -->
+                <article class="project-card" data-category="brand-collabs" data-project-id="12">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" alt="Beverage Brand Partnership" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="project-badge collab">BRAND COLLAB</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Culture & Taste Partnership</h3>
+                        <p class="card-summary">Year-long collaboration with beverage brand for cultural events.</p>
+                        <div class="card-meta">
+                            <span class="card-date">2022</span>
+                            <span class="card-location">Accra & Toronto</span>
+                        </div>
+                    </div>
+                    <button class="card-arrow" aria-label="View project details">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </article>
+
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results hidden" id="noResults">
+                <p>No projects found. Try adjusting your filters or search terms.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer CTA Section -->
+    <section class="footer-cta-section">
+        <div class="footer-cta-container">
+            <h2 class="cta-title">We collaborate with artists, brands, and communities worldwide.</h2>
+            <p class="cta-subtitle">Interested in working with us?</p>
+            <a href="join-us.html" class="cta-button-large">Start a Collaboration</a>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="projectModal" role="dialog" aria-labelledby="projectModalTitle" aria-modal="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" id="modalClose" aria-label="Close project details">×</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Project details will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook">f</i></a>
+            <a href="https://x.com/9thcityent?s=21" aria-label="Twitter"><i class="icon-twitter">𝕏</i></a>
+            <a href="https://www.instagram.com/9thcityent?igsh=MTl5aG1qNDNreHp1eg%3D%3D&utm_source=qr" aria-label="Instagram"><i class="icon-instagram">📷</i></a>
+        </div>
+
+        <div class="footer-content">
+            <p class="copyright">© Copyright 2025 9TH CITY ENTERTAINMENT. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <span>/</span>
+                <a href="#privacy">Privacy Policy</a>
+                <span>/</span>
+                <a href="#rights">Reservation of Rights</a>
+                <span>/</span>
+                <a href="#cookies">Cookie Choices</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/projects.js"></script>
+</body>
+</html>
