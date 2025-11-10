@@ -1,0 +1,249 @@
+<!-- artists-releases.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists & Releases - 9TH CITY ENTERTAINMENT</title>
+    <link rel="stylesheet" href="css/artists-releases.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side Menu -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn" aria-label="Close Menu"></button>
+        
+        <ul class="menu-items">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="artists-releases.html">ARTISTS & RELEASES</a></li>
+            <li><a href="#impact">PROJECTS</a></li>
+            <li><a href="media.html">MEDIA/VISUALS</a></li>
+            <li><a href="for-artists.html">FOR ARTISTS</a></li>
+            <li><a href="#careers">JOIN US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- News Button (Top Left) -->
+    <a href="latest.html" class="news-btn">LATEST</a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1920&q=80" alt="9TH CITY Artists" class="hero-image">
+        
+        <!-- Logo (clickable to return home) -->
+        <a href="index.html" class="logo-link">
+            <img src="img/9thCityLogoWhite.png" alt="9TH CITY ENTERTAINMENT" class="hero-logo">
+        </a>
+        <div class="logo-text">Discover Our Sound.</div>
+        
+        <h1 class="hero-title">ARTISTS & RELEASES</h1>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sticky Search & Filter Bar -->
+        <div class="search-filter-bar" id="searchFilterBar">
+            <div class="search-container">
+                <input 
+                    type="search" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search artists or releases..."
+                    aria-label="Search artists or releases"
+                >
+                <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+            </div>
+            
+            <button class="filter-toggle-btn" id="filterToggleBtn" aria-label="Toggle filters" aria-expanded="false">
+                <span class="filter-icon">⚙</span>
+                <span class="filter-text">Filters</span>
+            </button>
+        </div>
+
+        <!-- View Toggle Buttons (Now Always Visible) -->
+        <div class="view-toggle-section">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="releases" aria-pressed="true">Releases</button>
+                <button class="view-btn" data-view="artists" aria-pressed="false">Artists</button>
+            </div>
+        </div>
+
+        <!-- Filter Panel (Bottom Sheet on Mobile, Inline on Desktop) -->
+        <div class="filter-panel" id="filterPanel" role="dialog" aria-labelledby="filterPanelTitle" aria-hidden="true">
+            <div class="filter-backdrop" id="filterBackdrop"></div>
+            <div class="filter-content">
+                <div class="filter-header">
+                    <h2 id="filterPanelTitle" class="filter-title">FILTERS</h2>
+                    <button class="filter-close" id="filterClose" aria-label="Close filters">×</button>
+                </div>
+
+                <div class="filter-body">
+                    <!-- Sort -->
+                    <div class="filter-group">
+                        <label for="sortSelect" class="filter-label">SORT BY</label>
+                        <select id="sortSelect" class="filter-select">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="alphabetical">A-Z</option>
+                        </select>
+                    </div>
+
+                    <!-- Release Type (only shown when viewing releases) -->
+                    <div class="filter-group" id="typeFilterGroup">
+                        <label class="filter-label">RELEASE TYPE</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="type" value="Single" checked>
+                                <span>Single</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="type" value="EP" checked>
+                                <span>EP</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="type" value="Album" checked>
+                                <span>Album</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Genre -->
+                    <div class="filter-group">
+                        <label class="filter-label">GENRE</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="genre" value="Hip-Hop" checked>
+                                <span>Hip-Hop</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="genre" value="R&B" checked>
+                                <span>R&B</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="genre" value="Afrobeats" checked>
+                                <span>Afrobeats</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="genre" value="Electronic" checked>
+                                <span>Electronic</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="genre" value="Pop" checked>
+                                <span>Pop</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Year Range -->
+                    <div class="filter-group">
+                        <label for="yearRange" class="filter-label">YEAR</label>
+                        <select id="yearRange" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter Actions -->
+                    <div class="filter-actions">
+                        <button class="btn-reset" id="resetFilters">Reset All</button>
+                        <button class="btn-apply" id="applyFilters">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div class="results-container">
+            <div class="results-header">
+                <p class="results-count" id="resultsCount">Loading...</p>
+            </div>
+
+            <!-- Releases Grid (Now Default) -->
+            <div class="releases-grid" id="releasesGrid" role="region" aria-live="polite" aria-atomic="false">
+                <!-- Release cards will be inserted here by JS -->
+            </div>
+
+            <!-- Artists Grid -->
+            <div class="artists-grid hidden" id="artistsGrid" role="region" aria-live="polite" aria-atomic="false">
+                <!-- Artist cards will be inserted here by JS -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">Load More</button>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results hidden" id="noResults">
+                <p>No results found. Try adjusting your filters.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Artist Detail Modal/Bottom Sheet -->
+    <div class="modal-overlay hidden" id="artistModal" role="dialog" aria-labelledby="artistModalTitle" aria-modal="true">
+        <div class="modal-backdrop" id="artistModalBackdrop"></div>
+        <div class="modal-content" id="artistModalContent">
+            <button class="modal-close" id="artistModalClose" aria-label="Close artist details">×</button>
+            <div class="modal-body" id="artistModalBody">
+                <!-- Artist details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Release Detail Modal/Bottom Sheet -->
+    <div class="modal-overlay hidden" id="releaseModal" role="dialog" aria-labelledby="releaseModalTitle" aria-modal="true">
+        <div class="modal-backdrop" id="releaseModalBackdrop"></div>
+        <div class="modal-content" id="releaseModalContent">
+            <button class="modal-close" id="releaseModalClose" aria-label="Close release details">×</button>
+            <div class="modal-body" id="releaseModalBody">
+                <!-- Release details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="icon-facebook">f</i></a>
+            <a href="https://x.com/9thcityent?s=21" aria-label="Twitter"><i class="icon-twitter">𝕏</i></a>
+            <a href="https://www.instagram.com/9thcityent?igsh=MTl5aG1qNDNreHp1eg%3D%3D&utm_source=qr" aria-label="Instagram"><i class="icon-instagram">📷</i></a>
+        </div>
+
+        <div class="footer-content">
+            <p class="copyright">© Copyright 2025 9TH CITY ENTERTAINMENT. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#terms">Terms of Service</a>
+                <span>/</span>
+                <a href="#privacy">Privacy Policy</a>
+                <span>/</span>
+                <a href="#rights">Reservation of Rights</a>
+                <span>/</span>
+                <a href="#cookies">Cookie Choices</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/artists-releases.js"></script>
+</body>
+</html>
