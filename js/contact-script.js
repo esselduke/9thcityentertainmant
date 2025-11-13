@@ -139,12 +139,12 @@ document.querySelectorAll('.cta-card').forEach(card => {
         
         // Map headings to URLs (update these with your actual page URLs)
         const urlMap = {
-            'About 9TH CITY': 'index.html#about',
-            'Artists & Releases': 'index.html#labels',
-            'Projects & Collaborations': 'index.html#impact',
-            'For Artists': 'index.html#artists',
-            'Join Us': 'index.html#careers',
-            'Media / Visuals': 'index.html#innovation'
+            'About 9TH CITY': 'about.html',
+            'Artists & Releases': 'artists-releases.html',
+            // 'Projects & Collaborations': 'index.html#impact',
+            'For Artists': 'for-artists.html',
+            // 'Join Us': 'index.html#careers',
+            'Media / Visuals': 'media.html'
         };
 
         if (urlMap[heading]) {
